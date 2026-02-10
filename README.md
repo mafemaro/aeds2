@@ -2,8 +2,8 @@
 
 [![Linguagem](https://img.shields.io/badge/Linguagem-Java-orange.svg)](https://www.oracle.com/java/)
 [![Linguagem](https://img.shields.io/badge/Linguagem-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![Status](https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow.svg)]
-[![Instituição](https://img.shields.io/badge/Instituição-PUC%20Minas-blueviolet.svg)]
+![Status](https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow.svg)
+![Instituição](https://img.shields.io/badge/Instituição-PUC%20Minas-blueviolet.svg)
 [![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](./LICENSE)
 
 Este repositório tem como objetivo **registrar, organizar e documentar** os estudos desenvolvidos ao longo da disciplina **Algoritmos e Estruturas de Dados II (AEDS II)**, do curso de **Ciência da Computação** pela aluna **Maria Fernanda Oliveira Maro**.
