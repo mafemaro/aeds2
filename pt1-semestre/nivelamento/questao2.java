@@ -33,5 +33,6 @@ public class questao2 {
 
     System.out.println("Maior: " + maior);
     System.out.println("Menor: " + menor);
+    sc.close();
   }
 }
