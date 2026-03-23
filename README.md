@@ -42,6 +42,49 @@ A organização interna do repositório **pode evoluir ao longo do semestre**, a
 
 ---
 
+## 🌳 Estrutura do Projeto
+
+A organização do repositório segue a divisão da disciplina, separando conteúdos teóricos, laboratórios e trabalhos práticos:
+
+```bash
+📦 aeds2
+ ┣ 📂 pt1-semestre
+ ┃ ┣ 📂 labs
+ ┃ ┃ ┣ 📜 lab01/
+ ┃ ┃ ┗ 📜 lab02/
+ ┃ ┣ 📜 nivelamento/
+ ┃ ┣ 📜 ordenacao/
+ ┃ ┗ 📜 recursao/
+ ┣ 📂 tps
+ ┃ ┣ 📜 enunciados/
+ ┃ ┗ 📂 exercicios
+ ┃ ┃ ┗ 📜 tp1/
+ ┣ 📜 guia-ambiente-c.md
+ ┣ 📜 LICENSE
+ ┗ 📜 README.md
+```
+
+## 📚 Conteúdos Abordados
+
+- Nivelamento
+- Fundamentos de análise de algoritmos
+- Estruturas de dados lineares
+- Algoritmos de ordenação
+- Estruturas de dados flexíveis
+- Árvores binárias
+- Balanceamento de árvores
+- Tabelas e dicionários
+- Árvores TRIE
+
+---
+
+## ☕ Linguagens Utilizadas
+
+- **Java** (principal!)
+- **C** (em alguns exercícios e materiais complementares)
+
+---
+
 ## 🚀 Como Usar este Repositório  
 
 1. Navegue pelas pastas para encontrar o conteúdo desejado.  
