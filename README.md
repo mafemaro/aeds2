@@ -49,12 +49,15 @@ A organização do repositório segue a divisão da disciplina, separando conte�
 ```bash
 📦 aeds2
  ┣ 📂 pt1-semestre
- ┃ ┣ 📂 labs
+ ┃ ┣ 📂 beecrowd
+ ┃ ┃ ┣ 📜 enunciados/
+ ┃ ┃ ┗ 📂 exercicios
+ ┃ ┣ 📂 nivelamento/
  ┃ ┃ ┣ 📜 lab01/
  ┃ ┃ ┗ 📜 lab02/
- ┃ ┣ 📜 nivelamento/
- ┃ ┣ 📜 ordenacao/
- ┃ ┗ 📜 recursao/
+ ┃ ┣ 📂 nivelamento/
+ ┃ ┣ 📂 ordenacao/
+ ┃ ┗ 📂 recursao/
  ┣ 📂 tps
  ┃ ┣ 📜 enunciados/
  ┃ ┗ 📂 exercicios
