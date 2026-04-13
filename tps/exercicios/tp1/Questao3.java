@@ -1,101 +1,87 @@
-import java.util.Scanner;
+class Questao3{
 
-public class Questao3 {
-
-  public static boolean vogal(String linha){
-    String vogais = "aeiouAEIOU";
-
-    for(int i = 0; i < linha.length(); i++){
-      char letra = linha.charAt(i); // aqui pega o caractere que ta no indice i
-      
-      if(vogais.indexOf(letra) == -1){ // pega o caractere letra e percorre a string vogais, se nao achar nada igual retorna -1
-        return false; // retorna false se o if for verdade
-      }
-    }
-
-    return true; // se nao entrar no if do for, retorna true
-  }
-  
-  public static boolean consoante(String linha){
-    String vogais = "aeiouAEIOU";
-
-    for(int i = 0; i < linha.length(); i++){
-      char letra = linha.charAt(i); // aqui pega o caractere que ta no indice i
-
-      if(vogais.indexOf(letra) != -1){ // o if ao contrario das vogais
-        return false;
-      }
-
-      if((letra < 'a' || letra > 'z') && (letra < 'A' || letra > 'Z')){ // verifica se nao é letra
-        return false;
-      }
-    }
-
-    return true;
+  //função que verifica se é uma letra
+  public static boolean letra(char c){
+    return (c>='a'&&c<='z')||(c>='A'&&c<='Z');
   }
 
-  public static boolean inteiro(String linha){
-    for(int i = 0; i < linha.length(); i++){
-      char letra = linha.charAt(i);
-
-      if(letra < '0' || letra > '9'){ // verifica se nao é numero
-        return false;
-      }
-    }
-
-    return true; // se todos forem numeros retorna true
+  //verifica se a string é "FIM"
+  public static boolean ehFim(String s){
+    return (s.length()==3&&s.charAt(0)=='F'&&s.charAt(1)=='I'&&s.charAt(2)=='M');
   }
 
-  public static boolean real(String linha){
-    int ponto = 0;
+  //verifica se é só vogais
+  public static boolean soVogais(String s){
+    for(int i=0;i<s.length();i++){
+      char c=s.charAt(i);//pega caracter por caracter
 
-    for(int i = 0; i < linha.length(); i++){
-      char c = linha.charAt(i);
+      if(!letra(c)) return false;//se nao for letra retorna false
 
-      if(c == '.' || c == ','){ // verifica se é ponto ou virgula
-        ponto++;
-        if(ponto > 1){ // nao pode ter mais de um ponto
-          return false;
-        }
-      }
-      else if(c < '0' || c > '9'){ // verifica se nao é numero
-        return false;
-      }
+      if(c!='a'&&c!='e'&&c!='i'&&c!='o'&&c!='u'&&
+         c!='A'&&c!='E'&&c!='I'&&c!='O'&&c!='U') return false;//verifica vogal
     }
 
-    return true;
+    return true;//se passar por tudo é verdadeiro
   }
 
-  public static void main(String[] args) {
-    Scanner sc = new Scanner (System.in);
-    String linha = sc.nextLine();
+  //verifica se é só consoantes
+  public static boolean soConsoantes(String s){
+    for(int i=0;i<s.length();i++){
+      char c=s.charAt(i);//pega caracter
 
-    while(!linha.equals("FIM")){
+      if(!letra(c)) return false;//se nao for letra retorna false
 
-      boolean vogalTrue = vogal(linha);
-      boolean consoanteTrue = consoante(linha);
-      boolean inteiroTrue = inteiro(linha);
-      boolean realTrue = real(linha);
-
-      // X1
-      if(vogalTrue == true) System.out.print("SIM ");
-      else System.out.print("NAO ");
-
-      // X2
-      if(consoanteTrue == true) System.out.print("SIM ");
-      else System.out.print("NAO ");
-
-      // X3
-      if(inteiroTrue == true) System.out.print("SIM ");
-      else System.out.print("NAO ");
-
-      // X4
-      if(realTrue == true) System.out.print("SIM");
-      else System.out.print("NAO");
-
-      linha = sc.nextLine();
+      if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||
+         c=='A'||c=='E'||c=='I'||c=='O'||c=='U') return false;//se for vogal retorna false
     }
-    
-    sc.close();
+
+    return true;//se passar por tudo é verdadeiro
+  }
+
+  //verifica se é numero inteiro
+  public static boolean soInteiro(String s){
+    for(int i=0;i<s.length();i++){
+      char c=s.charAt(i);//pega caracter
+
+      if(!(c>='0'&&c<='9')) return false;//se nao for numero retorna false
+    }
+
+    return true;//se passar por tudo é inteiro
+  }
+
+  //verifica se é numero real
+  public static boolean soReal(String s){
+    int sep=0;//contador de . ou ,
+
+    for(int i=0;i<s.length();i++){
+      char c=s.charAt(i);//pega caracter
+
+      if((c>='0'&&c<='9')||c=='.'||c==','){
+        if(c=='.'||c==',') sep++;//conta separadores
+      }else return false;//se nao for retorna falso
+    }
+
+    if(sep>1) return false;//se tiver mais de um separador
+
+    return true;//se passar por tudo é real
+  }
+
+  public static void main(String[] args){
+    String linha=MyIO.readLine();//le primeira linha
+
+    while(!ehFim(linha)){//enquanto linha nao for FIM
+
+      boolean x1=soVogais(linha);
+      boolean x2=soConsoantes(linha);
+      boolean x3=soInteiro(linha);
+      boolean x4=soReal(linha);
+
+      if(x1) System.out.print("SIM "); else System.out.print("NAO ");
+      if(x2) System.out.print("SIM "); else System.out.print("NAO ");
+      if(x3) System.out.print("SIM "); else System.out.print("NAO ");
+      if(x4) System.out.println("SIM"); else System.out.println("NAO");
+
+      linha = MyIO.readLine(); // le proxima linha
+    }
   }
 }

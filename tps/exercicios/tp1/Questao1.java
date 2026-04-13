@@ -12,14 +12,21 @@ class Questao1{
 
         return cifrado; // retorna a string ja cifrada
     }
+    
+    public static boolean fim(String str1, String str2){
+		if(str1.length() != str2.length()) return false; // se tem tamanhos diferentes, retorna falso
+
+		for(int i = 0; i < str1.length(); i++){ // vai do inicio ate o final da string 
+			if(str1.charAt(i) != str2.charAt(i)) return false; // se for diferente de F ou I ou M, retorna falso 
+        }
+		return true; // se nao cai em nenhum if, retorna verdadeiro 
+	}
 
     public static void main(String[] args){
 
-        MyIO.setCharset("ISO-8859-1"); // define o padrao de caracteres (importante pra nao dar erro com acento)
-
         String linha = MyIO.readLine(); // le a primeira linha
 
-        while(!linha.equals("FIM")){ // repete ate digitar FIM
+        while(!fim(linha, "FIM")){ // pega a funcao fim e repete ate digitar FIM
 
             String limpa = "";
 
