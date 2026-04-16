@@ -31,9 +31,6 @@ A eficiência do Bubble Sort é diretamente impactada pelo número de comparaç�
 
 - **Caso Médio:** `O(n²)` *!! caso médio não vemos em AEDS 2.*
 
-- **Complexidade de Espaço:** `O(1)`  
-  Sendo um algoritmo *in-place*, requer apenas uma quantidade constante de memória adicional.
-
 ---
 
 ## 4. Implementação em Java
@@ -43,10 +40,13 @@ public class BubbleSort {
   // metodo do bubblesort
   public static void ordenar(int[] vetor) {
     int n = vetor.length;
+    
     // esse laço garante que ele vai passar pelo vetor n vezes
     for (int i = 0; i < n; i++) {
+
       // esse laço faz comparações lado a lado
       for (int j = 0; j < n - 1; j++) {
+
         // se o atual for maior que o proximo, troca de lado
         if (vetor[j] > vetor[j + 1]) {
           int aux = vetor[j];
