@@ -15,7 +15,7 @@ No **Max Heap**, todo nó pai é maior ou igual aos seus filhos.
 
 ---
 
-## 2. Passo a Passo do Algoritmo
+## 2. Passo a Passo do Heap
 
 ### 1. Construção do Heap (Build-Heap)
 - Reorganiza o vetor para obedecer à propriedade do Max Heap

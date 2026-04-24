@@ -7,7 +7,7 @@ O algoritmo recebe esse nome porque os elementos maiores "flutuam" para o final 
 
 ---
 
-## 2. Passo a Passo do Algoritmo
+## 2. Passo a Passo do Bubble Sort
 
 Para ordenar uma lista em ordem crescente:
 
