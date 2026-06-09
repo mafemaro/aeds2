@@ -7,6 +7,7 @@ A lista é o tipo abstrato de dados que pode movimentar (isso é, tirar ou coloc
         - de nomes (array de string)
         - de notas (array de float)
         - de carro (array de objeto do tipo carro)
+        
 ---
 
 ## 1. Visão Geral
