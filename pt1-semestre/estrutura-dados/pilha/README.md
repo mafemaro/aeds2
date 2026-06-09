@@ -81,13 +81,3 @@ Considerando a implementação onde o topo é o final do vetor:
 
 ## 6. Conclusão
 A pilha é a estrutura ideal quando a ordem de processamento deve ser a inversa da ordem de chegada. Sua implementação estática é extremamente veloz (tempo constante), desde que o topo seja mantido no final do array para evitar movimentações desnecessárias de memória.
-
----
-
-### **Simulador de Pilha**
-
-Para visualizar como o último elemento adicionado é sempre o primeiro a sair, utilize o simulador abaixo. Observe que, ao "Empilhar", o novo valor ocupa o topo e, ao "Desempilhar", o acesso é restrito ao item mais recente.
-
-```json?chameleon
-{"component":"LlmGeneratedComponent","props":{"height":"600px","prompt":"Crie um simulador educativo de Pilha (Stack). \n\nObjetivo: Demonstrar a política LIFO (Last In, First Out) e a eficiência O(1).\n\nConfiguração Inicial:\n- Array vertical de tamanho 6.\n- Elementos iniciais: [10, 20] (com 20 no topo).\n\nFuncionalidades:\n1. Botões: 'Empilhar (Push)' com input de valor, 'Desempilhar (Pop)'.\n2. Visualização Vertical: Represente a pilha como uma coluna de blocos. O fundo da pilha deve estar na base e o topo crescer para cima.\n3. Destaque do Topo: Mostre visualmente uma seta ou indicador escrito 'TOPO' apontando para o elemento mais alto.\n4. Animação: Quando o usuário clicar em Push, o novo elemento deve 'cair' no topo da pilha. No Pop, o elemento do topo deve 'sair' para cima.\n5. Log de Operações: Mostre uma lista das últimas ações realizadas (ex: 'Pop: removeu 20').\n\nInstruções Visuais: Use blocos coloridos para os números. Mantenha os slots vazios visíveis como contornos para mostrar o limite da pilha. Todo o texto da interface deve estar em Português.","id":"im_c6defa3320921770"}}
-```

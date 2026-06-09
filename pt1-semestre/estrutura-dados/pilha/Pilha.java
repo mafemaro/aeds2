@@ -3,21 +3,22 @@ public class Pilha {
     private int n; // Representa a quantidade e aponta para a próxima posição vaga
 
     public Pilha(int tamanho) {
-        array = new int[tamanho];
+        array = new int[tamanho]; // pega um array de tamanho definido pelo usuario
         n = 0;
     }
 
-    // (Empilhar no fim)
+    // empilhar no fim
     public void empilhar(int x) throws Exception {
-        if (n >= array.length) throw new Exception("Erro: Pilha cheia!");
-        array[n] = x;
-        n++;
+        if (n >= array.length) throw new Exception("Erro: Pilha cheia!"); // se o tamanho n for maior, a pilha ja nao tem mais capacidade
+        array[n] = x; // pega a posicao do n e coloca o numero passado para empilhar
+
+        n++; // passa pro proximo espaco da pilha, importante para controlar onde o prx elemento sera inserido
     }
 
-    // (Desempilhar do fim)
+    // desempilhar do fim
     public int desempilhar() throws Exception {
-        if (n == 0) throw new Exception("Erro: Pilha vazia!");
-        return array[--n]; // Decrementa e retorna o topo
+        if (n == 0) throw new Exception("Erro: Pilha vazia!"); // se n for 0, significa que nao tem nenhum elemento 
+        return array[--n]; // decrementa o n para apontar para o penultimo elemento 
     }
 
     public void mostrar() {

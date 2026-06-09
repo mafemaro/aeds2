@@ -1,5 +1,14 @@
 # Lista Linear
 
+## 0. Lembrete
+A lista é o tipo abstrato de dados que pode movimentar (isso é, tirar ou colocar) dados em *qualquer* posição!!!
+    * Lista pode ser:
+        - de valores (array de int)
+        - de nomes (array de string)
+        - de notas (array de float)
+        - de carro (array de objeto do tipo carro)
+---
+
 ## 1. Visão Geral
 Uma **Lista Linear** é um Tipo Abstrato de Dados (TAD) fundamental onde os elementos são organizados de forma sequencial. Diferente de estruturas mais rígidas, a lista permite a inserção e remoção de itens em qualquer posição: no início, no fim ou em um índice específico.
 
@@ -90,13 +99,3 @@ A eficiência de uma lista linear sequencial depende da posição da operação,
 
 ## 6. Conclusão
 A Lista Linear Sequencial é ideal para situações onde o acesso aleatório frequente é necessário e o tamanho dos dados é previsível. Para cenários com muitas inserções no início ou tamanho altamente dinâmico, estruturas como **Listas Encadeadas** podem ser alternativas mais eficientes.
-
----
-
-### **Explorador de Operações em Lista**
-
-Para entender por que as operações no início da lista são mais "caras" (lentas) do que no final, é preciso visualizar o **deslocamento de elementos**. No simulador abaixo, você pode inserir ou remover números e observar como os outros itens precisam se mover para abrir espaço ou preencher lacunas.
-
-```json?chameleon
-{"component":"LlmGeneratedComponent","props":{"height":"600px","prompt":"Crie um simulador educativo de Lista Linear Sequencial (Array). \n\nObjetivo: Demonstrar visualmente o deslocamento de elementos durante inserção e remoção.\n\nConfiguração Inicial:\n- Array de tamanho fixo 8.\n- Elementos iniciais: [10, 20, 30].\n\nFuncionalidades:\n1. Botões de ação: 'Inserir Início', 'Inserir Fim', 'Remover Início', 'Remover Fim'.\n2. Visualização: Mostre os 8 slots do array. Slots ocupados devem ter um destaque visual e mostrar o valor. Slots vazios devem ser visualmente distintos.\n3. Animação de Deslocamento: Quando o usuário clicar em 'Inserir Início', mostre visualmente os elementos existentes (10, 20, 30) 'andando' um slot para a direita antes do novo valor aparecer na posição 0.\n4. Contador 'n': Exiba o valor atual de n (quantidade de elementos).\n5. Feedback de Complexidade: Ao realizar uma ação, mostre uma pequena etiqueta dizendo se aquela operação foi O(1) ou O(n).\n\nInstruções visuais: Use blocos quadrados para representar as células do array. Garanta que a transição dos números entre as células seja visível para enfatizar o custo computacional do movimento.","id":"im_f6e683a34277e496"}}
-```

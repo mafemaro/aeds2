@@ -89,13 +89,3 @@ Ao utilizar a estratégia da **Fila Circular**, alcançamos o cenário ideal de 
 
 ## 6. Conclusão
 A Fila é a abstração correta quando precisamos garantir justiça e ordem temporal no processamento de dados (quem chega primeiro, é atendido primeiro). O uso da técnica de *Array Circular* é uma das sacadas mais elegantes da estrutura de dados básica para contornar o alto custo de manipulação de memória inerente aos vetores estáticos.
-
----
-
-### **Simulador de Fila (FIFO)**
-
-Para fixar a diferença crucial entre a Fila e as estruturas anteriores, brinque com o simulador abaixo. Note como os elementos sempre entram pela "Traseira" e saem obrigatoriamente pela "Frente", respeitando rigidamente a ordem de chegada.
-
-```json?chameleon
-{"component":"LlmGeneratedComponent","props":{"height":"600px","prompt":"Crie um simulador educativo de Fila (Queue) com a política FIFO. \n\nObjetivo: Demonstrar visualmente a entrada pelo final e saída pelo início, enfatizando o First In, First Out.\n\nConfiguração Inicial:\n- Estrutura visual horizontal representando um 'Tubo' ou 'Corredor' de 6 posições.\n- Elementos iniciais (da esquerda para direita): [10, 20, 30]. O '10' é o 'Primeiro' (Frente) e o '30' é o último inserido (Traseira).\n\nFuncionalidades:\n1. Botões: 'Enfileirar (Enqueue)' com campo para digitar um valor, e 'Desenfileirar (Dequeue)'.\n2. Labels dinâmicos: Mostre visualmente um indicador 'Frente da Fila' (onde ocorre o Dequeue) e 'Fim da Fila' (onde ocorre o Enqueue).\n3. Animação: \n   - Ao Enfileirar, o novo elemento deve entrar pela direita.\n   - Ao Desenfileirar, o elemento mais à esquerda sai.\n   - Após desenfileirar, anime o deslocamento do restante da fila para a esquerda, ilustrando o conceito lógico de fila andando.\n4. Log de operações: Histórico em texto (ex: 'Saiu o elemento 10').\n\nInstruções Visuais: Todo texto da interface em Português. Use formas com aparência sólida para os elementos e mantenha espaços delimitados no contêiner da fila.","id":"im_b92fdaf776b4b471"}}
-```
